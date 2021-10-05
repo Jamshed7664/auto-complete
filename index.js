@@ -5,7 +5,7 @@ function autoView(inp, arr) {
         closeView();
         a = document.createElement("DIV");
         a.setAttribute("id", this.id + "autocomplete-list");
-        a.setAttribute("class", "autocomplete-items");
+        a.setAttribute("class", "items");
         this.parentNode.appendChild(a);
         for (i = 0; i < arr.length; i++) {
             if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
@@ -23,7 +23,7 @@ function autoView(inp, arr) {
     });
 
     function closeView(elmnt) {
-        var x = document.getElementsByClassName("autocomplete-items");
+        var x = document.getElementsByClassName("items");
         for (var i = 0; i < x.length; i++) {
             if (elmnt != x[i] && elmnt != inp) {
                 x[i].parentNode.removeChild(x[i]);
